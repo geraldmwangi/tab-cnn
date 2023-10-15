@@ -49,6 +49,7 @@ The default spectral spresentation is the Constant-Q Transform (CQT). To change 
 
 Run the following line to train and test the TabCNN model:
 
+`for a in /sys/bus/pci/devices/*; do echo 0 | sudo tee -a $a/numa_node; done`
 `python model/TabCNN.py`
 
 A summary log and a csv results file will be saved in a time-stamped folder within the `model/saved/` directory. Additionally, a folder for each fold of data will be created, containing the individual model's weights and predictions. 

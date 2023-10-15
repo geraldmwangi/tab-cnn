@@ -151,9 +151,7 @@ class TabCNN:
         self.model.fit_generator(generator=self.training_generator,
                     validation_data=None,
                     epochs=self.epochs,
-                    verbose=1,
-                    use_multiprocessing=True,
-                    workers=9)
+                    verbose=1)
         
     def save_weights(self):
         self.model.save_weights(self.split_folder + "weights.h5")
